@@ -23,6 +23,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
 	xfce4-session gnome-icon-theme thunar xfce4-terminal
 
+ADD bin/start.sh /usr/local/bin/
+ADD bin/start-tmate.sh /usr/local/bin/
+ADD bin/start-vnc.sh /usr/local/bin/
+
 # NoVNC
 RUN mkdir -p /opt/novnc \
 	&& curl -fsSL https://github.com/novnc/noVNC/archive/v1.0.0-testing.2.tar.gz | tar xzv --strip 1 -C /opt/novnc

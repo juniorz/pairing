@@ -69,7 +69,7 @@ docker run -it --rm \
 	-v ${HOME}/.config/nvim:/pairing/.config/nvim:ro \
 	-v ${HOME}/.local/share/nvim:/pairing/.local/share/nvim:ro \
 	-v ${HOME}/.tmux.conf:/etc/tmux.conf:ro \
-	pairing /pairing/bin/start.sh
+	pairing /usr/local/bin/start.sh
 
 # Clean pub keys dir
 rm -rf $dst
